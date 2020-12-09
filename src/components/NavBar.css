@@ -13,14 +13,29 @@ nav {
     margin: 10px 0px;
 }
 
+#menuDerecha {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
 #menu {
     display: flex;
     flex-direction: row;
-    margin: 10px 0px;
+    margin: 10px 10px 10px 0px;
 }
 
 .categorias {
     margin-left: 10px;
     padding: 10px;
     list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: blueviolet;
 }
