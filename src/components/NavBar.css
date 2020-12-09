@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0px 5px;
+    font-size: 20px;
+}
+
+#brand {
+    padding: 10px;
+    background-color: blueviolet;
+    color: white;
+    margin: 10px 0px;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
+.categorias {
+    margin-left: 10px;
+    padding: 10px;
+    list-style-type: none;
+}
