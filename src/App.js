@@ -25,9 +25,9 @@ import ItemListContainer from './components/ItemListContainer';
   );
 } */
 
-let App = () => <>
+const App = () => <>
   <NavBar />
-  <ItemListContainer greeting = "Aquí irá el catálogo."/>
+  <ItemListContainer greeting = "Bienvenidos a la tienda."/>
   </>;
 
 export default App;

@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBar.css';
 import CartWidget from './CartWidget'
 
-let NavBar = () => <nav>
+const NavBar = () => <nav>
     <p id="brand">Coder Kiosco</p>
     <div id="menuDerecha">
         <ul id="menu">
