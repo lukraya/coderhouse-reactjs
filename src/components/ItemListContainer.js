@@ -1,7 +1,5 @@
 import React from 'react';
 
-let greeting = "Aquí irá el catálogo.";
-
-let ItemListContainer = ({greeting}) => <p>{greeting}</p>;
+let ItemListContainer = (props) => <h1>{props.greeting}</h1>;
 
 export default ItemListContainer;
