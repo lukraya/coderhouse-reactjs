@@ -39,3 +39,8 @@ a {
 a:hover {
     color: blueviolet;
 }
+
+#cartWidget {
+    display: flex;
+    align-items: center;
+}
