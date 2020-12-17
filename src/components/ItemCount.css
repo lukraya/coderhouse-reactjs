@@ -1,0 +1,17 @@
+#itemCount {
+    margin-left: 10px;
+}
+
+#seleccionCant {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+#seleccionCant p {
+    margin: 0;
+}
+
+#agregar {
+    margin-top: 10px;
+}
