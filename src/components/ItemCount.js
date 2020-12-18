@@ -1,15 +1,15 @@
 import React from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({initial,aumentarInitial,disminuirInitial}) => {
-    
+const ItemCount = ({initial,onAdd,onSubstract}) => {
+   
     return (
         <div id="itemCount">
             <p>Alfajor Shot triple</p>
             <div id="seleccionCant">
-                <button onClick={disminuirInitial} className="controles">-</button>
+                <button onClick={onSubstract} className="controles">-</button>
                 <p>{initial}</p>
-                <button onClick={aumentarInitial} className="controles">+</button>
+                <button onClick={onAdd} className="controles">+</button>
             </div>
             <button id="agregar">Agregar al carrito</button>
         </div>
