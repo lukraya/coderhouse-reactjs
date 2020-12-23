@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import ItemList from './ItemList';
 
 const ItemListContainer = ({greeting}) => {
     const [stock,setStock] = React.useState(10);
@@ -18,9 +19,10 @@ const ItemListContainer = ({greeting}) => {
             setStock(stock+1);
         }      
     }
-    
+
     return (<>
         <h1>{greeting}</h1>
+        <ItemList/>
         <ItemCount initial={initial} onAdd={onAdd} onSubstract={onSubstract}/>
     </>
     )
