@@ -1,7 +1,8 @@
 import React from 'react';
 
+
 const Item = ({item})=> {
-    console.log(item);
+    console.log(item.pictureURL);
 
     return <>
         <img src={item.pictureURL} alt="Imagen de producto" height="50px" width="50px"></img>
