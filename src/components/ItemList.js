@@ -1,5 +1,7 @@
 import React from 'react';
+import './styles.css';
 import Item from './Item';
+import ItemDetailContainer from './ItemDetailContainer';
 import jorgito from './media/alfajor-jorgito-chocolate.jpg';
 import milka from './media/alfajor-milka-oreo.jpg';
 import shot from './media/alfajor-shot-triple.jpg';
@@ -20,17 +22,19 @@ const ItemList = ()=> {
         })
     }, []) 
     
-    console.log(items[0])
+    /* console.log(items[0]) */
 
-    return (
-        <div>
-            {items.length === 0 ? <p>Cargando productos</p> : null}
-            {/* <img src={jorgito} alt="prueba"></img> */}
-            {items.map((item,indice)=>{
-                console.log(item.pictureUrl);
-                return <Item item={item} key={item.id}/>
-            })}
-        </div> //cambiar luego a una ul con li y sacar los estilos
+    return (<>
+            <div id="itemList">
+                {items.length === 0 ? <p>Cargando productos</p> : null}
+                {/* <img src={jorgito} alt="prueba"></img> */}
+                {items.map((item,indice)=>{
+                    /* console.log(item.pictureUrl); */
+                    return <Item item={item} key={item.id} />
+                })}
+            </div> {/* cambiar luego a una ul con li y sacar los estilos */}
+            <ItemDetailContainer items={items}/>
+        </>
     )
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 import ItemCount from './ItemCount';
 import ItemList from './ItemList';
 

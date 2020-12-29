@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css';
 import cartIcon from './media/cartIcon.jpg';
 
 const CartWidget = () => <a href="#" id="cartWidget">

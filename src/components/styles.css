@@ -1,3 +1,8 @@
+h1 {
+    text-align: center;
+}
+
+/* ESTILOS NAVBAR */
 nav {
     display: flex;
     flex-direction: row;
@@ -43,4 +48,40 @@ a:hover {
 #cartWidget {
     display: flex;
     align-items: center;
+}
+
+/* ESTILOS ITEMLIST */
+#itemList {
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* ESTILOS ITEMDETAIL */
+#itemDetail {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#itemDetail p {
+    margin-bottom: 5px;
+}
+
+/* ESTILOS ITEMCOUNT */
+#itemCount {
+    margin-left: 10px;
+}
+
+#seleccionCant {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+
+#seleccionCant p {
+    margin: 0;
+}
+
+#agregar {
+    margin-top: 10px;
 }

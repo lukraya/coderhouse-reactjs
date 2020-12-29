@@ -1,5 +1,5 @@
 import React from 'react';
-import './ItemCount.css';
+import './styles.css';
 
 const ItemCount = ({initial,onAdd,onSubstract}) => {
    
