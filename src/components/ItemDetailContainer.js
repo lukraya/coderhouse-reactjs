@@ -7,33 +7,28 @@ const ItemDetailContainer = ()=> {
     const [item,setItem] = useState();
     const {id} = useParams();
 
-    /* const buscarItem = items.find((elemento)=>{ return elemento.id === 1})
-    console.log(buscarItem) */
-
-    useEffect(()=>{
-       /*  new Promise ((resolver,rechazar)=>{
-            setTimeout(()=>{
-                resolver(buscarItem)
-            },2000)
-        })
-        .then((resultado)=>{
-            setProducto(resultado)
-        })
-    },[buscarItem]) */
-    let getProductos = fetch("../productos.json")
+    useEffect(()=>{       
+        let getProductos = fetch("../productos.json")
 
         getProductos
-        .then((resultado)=>{
-            return resultado.json()
+        .then((resultados)=>{
+            return resultados.json()
         })
-        .then((resultado)=>{
+        .then((resultados)=>{
             setTimeout(()=>{
                 if(id){
-                    setItem(resultado.filter(item=>item.id===id)[0])
+                    console.log(resultados)
+                    console.log(id)
+                    /* setItem(resultados.filter(resultado=>resultado.id===id)[0]) */
+                    /* setItem(resultados) */
+                    let resultado = resultados.filter(resultado=>resultado.id==id)[0]
+                    console.log(resultado)
+                    setItem(resultado)
                 }
             },2000)
         })
     }, [id])
+    console.log(item)
 
     return (<div>
         {item ? <ItemDetail item={item}/> : <p>Cargando detalles</p>}

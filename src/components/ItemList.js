@@ -6,6 +6,7 @@ import milka from './media/alfajor-milka-oreo.jpg';
 import shot from './media/alfajor-shot-triple.jpg'; */
 
 const ItemList = ({items})=> {
+    /* console.log(items) */
     
     return (<>
             <div id="itemList">

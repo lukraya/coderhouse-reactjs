@@ -21,7 +21,6 @@ const ItemCount = ({initial,stock}) => {
    
     return (
         <div id="itemCount">
-            <p>Alfajor Shot triple</p>
             <div id="seleccionCant">
                 <button onClick={onSubstract} className="controles">-</button>
                 <p>{inicial}</p>

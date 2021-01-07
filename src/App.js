@@ -15,17 +15,15 @@ const App = () => {
         <Route path="/" exact>
           <ItemListContainer greeting="Bienvenidos a la tienda."/>
         </Route>
-        <Route path="/category/:id" exact>
+        <Route path="/category/:id">
           <ItemListContainer greeting="Bienvenidos a la tienda."/>
         </Route>
-        <Route path="/item/:id" exact>
+        <Route path="/item/:id">
           <ItemDetailContainer/>
         </Route>
       </Switch>
     </main>
   </BrowserRouter>)
-} 
-<main>
+}
 
-  </main>
 export default App;

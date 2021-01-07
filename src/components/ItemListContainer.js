@@ -8,6 +8,7 @@ const ItemListContainer = ({greeting}) => {
     const {id} = useParams();
 
     useEffect(()=>{
+        /* console.log("Esto es un efecto") */
         let getProductos = fetch("../productos.json")
 
         getProductos
@@ -18,23 +19,12 @@ const ItemListContainer = ({greeting}) => {
             setTimeout(()=>{
                 /* console.log(resultado) */
                 if(id){
-                    setItems(resultado.filter(item=>item.category===id))
+                    setItems(resultado.filter(item=>item.categoria===id))
                 }else{
                     setItems(resultado)
                 }
             },2000)
-        })
-        
-       /*  new Promise ((resolver, rechazar) => {
-            setTimeout(()=>{
-                resolver([{id:1, title:"Jorgito", description:"Alfajor de chocolate", price:2, pictureUrl: jorgito},
-                {id:2, title:"Milka Oreo", description:"Alfajor triple", price:5, pictureUrl: milka},
-                {id:3, title:"Shot", description:"Alfajor triple", price:5, pictureUrl: shot}])
-            },2000);
-        })
-        .then((resultado)=>{
-            setItems(resultado)
-        }) */
+        })       
     }, [id])
 
     return (<>
