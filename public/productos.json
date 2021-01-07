@@ -1,0 +1,81 @@
+[   {
+        "id": 1,
+        "categoria": "Bebidas",
+        "title": "Coca-Cola Sabor Original",
+        "description":"Coca-Cola Sabor Original Menos Azúcares, botella 500ml", 
+        "price":70,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEtVCn8bjmfZLLw24ZX9MOfAIFvHeyM8XJmYX9DNT6rN6i7FPsmwu57nPeELE&usqp=CAc"
+    },
+
+    {
+        "id": 2,
+        "categoria": "Bebidas",
+        "title": "Aquarius Pera",
+        "description":"Aquarius sabor pera, botella 600ml", 
+        "price":70,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1raCz7xomuCwA_CoqFTmMYEUlvjwwxEjxzT-LfkHOPwVaGctRGZ7C-fW7pL6kUXmuCWGg98&usqp=CAc"
+    },
+
+    {
+        "id": 3,
+        "categoria": "Bebidas",
+        "title": "Cepita Manzana",
+        "description":"Jugo Cepita sabor manzana, 1lt", 
+        "price":70,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKLW-owJ1es38rPKM3TE94CZyEHHpbNyhxWQ&usqp=CAU"
+    },
+
+    {
+        "id": 4,
+        "categoria": "Galletitas",
+        "title": "Pepitos",
+        "description":"Pepitos", 
+        "price":50,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWrnDCREcGronwiMXfjyq7juWVdcs9kyabeo-TCY-_LXwv_GmN0bv2RUMjnQ460gxjfAOP8VnL&usqp=CAc"
+    },
+
+    {
+        "id": 5,
+        "categoria": "Galletitas",
+        "title": "Sonrisas",
+        "description":"Sonrisas", 
+        "price":50,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBy2b3iKJQEVgKVEA0V1_pvnyTJPmsTUTYQZxB_m338QpPkgbYb6a86ddOknM9SfntnqcOOevDcQ&usqp=CAc"
+    },
+
+    {
+        "id": 6,
+        "categoria": "Galletitas",
+        "title": "Oreo",
+        "description":"Oreo", 
+        "price":50,
+        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXqjEQkfm1L42h-NHngD_hmwImshH_-Kh2B0YCpZTkgP0E8m7TbOPVV9xwbU7-rlJvjLsCaOFK&usqp=CAc"
+    },
+
+    {
+        "id": 7,
+        "categoria": "Alfajores",
+        "title":"Jorgito",
+        "description":"Alfajor de chocolate", 
+        "price":30,
+        "pictureURL": "https://www.distribuidorapop.com.ar/wp-content/uploads/2016/08/alfajor-jorgito-chocolate-venta.jpg" 
+    },
+
+    {
+        "id": 8, 
+        "categoria": "Alfajores",
+        "title":"Milka Oreo", 
+        "description":"Alfajor triple", 
+        "price":40,
+        "pictureURL": "https://http2.mlstatic.com/alfajor-milka-torta-oreo-61g-x-12u-gomarket-mayorista-D_NQ_NP_811865-MLA32318711592_092019-Q.jpg" 
+    },
+
+    {
+        "id": 9, 
+        "categoria": "Alfajores",
+        "title":"Shot", 
+        "description":"Alfajor triple", 
+        "price":40,
+        "pictureURL": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/2181250_f.jpg" 
+    }
+]
