@@ -17,18 +17,16 @@ const ItemDetailContainer = ()=> {
         .then((resultados)=>{
             setTimeout(()=>{
                 if(id){
-                    console.log(resultados)
-                    console.log(id)
-                    /* setItem(resultados.filter(resultado=>resultado.id===id)[0]) */
-                    /* setItem(resultados) */
+                    /* console.log(resultados) */
+                    /* console.log(id) */                    
                     let resultado = resultados.filter(resultado=>resultado.id==id)[0]
-                    console.log(resultado)
+                    /* console.log(resultado) */
                     setItem(resultado)
                 }
             },2000)
         })
     }, [id])
-    console.log(item)
+    /* console.log(item) */
 
     return (<div>
         {item ? <ItemDetail item={item}/> : <p>Cargando detalles</p>}

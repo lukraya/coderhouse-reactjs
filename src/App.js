@@ -5,6 +5,7 @@ import './components/styles.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Cart from './components/Cart';
 
 const App = () => {
   return (
@@ -20,6 +21,9 @@ const App = () => {
         </Route>
         <Route path="/item/:id">
           <ItemDetailContainer/>
+        </Route>
+        <Route path="/cart">
+          <Cart/>
         </Route>
       </Switch>
     </main>
