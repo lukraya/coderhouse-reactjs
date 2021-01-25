@@ -1,18 +1,25 @@
 import React, { useContext } from 'react'
+import { NavLink } from 'react-router-dom'
 import { contexto } from '../CartContext'
-import Item from './Item'
+import CartItem from './CartItem'
 
 const Cart = () => {
-  const {cart} = useContext(contexto)
-  /* console.log(producto) */
-  console.log(cart)
+  const {cart, clear} = useContext(contexto)
+  /* console.log(cart) */  
 
     return (
-        <>
-          {cart.length > 0 ? 
-          cart.map(item=>{return <p key={item.producto.id}>Producto: {item.producto.title} Cantidad: {item.cantidad}</p>})
-          : <p>Este es el carrito</p>}
-        </>
+        <div className="cart">
+          {cart.length > 0 ?
+          <>
+          {cart.map(item=>{return <CartItem key={item.producto.id} item={item}/>})}
+          <p>Total: $</p>
+          <button onClick={clear}>Vaciar el carrito</button>
+          </>
+          : <>
+              <p>No hay productos en el carrito aún.</p>
+              <button><NavLink to="/">Ir a la tienda</NavLink></button>
+            </>}
+        </div>
     )
 }
 

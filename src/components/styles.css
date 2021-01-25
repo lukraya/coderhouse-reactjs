@@ -85,3 +85,13 @@ a:hover {
 #agregar {
     margin-top: 10px;
 }
+
+/* ESTILOS CART  */
+.cart {
+    padding: 15px;
+}
+
+.productoCart {
+    display: inline-block;
+    margin: 10px 15px 10px 0px;
+}

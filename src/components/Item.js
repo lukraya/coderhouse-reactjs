@@ -6,7 +6,7 @@ const Item = ({item})=> {
     /* console.log(item.pictureURL); */
 
     return <div>
-        <img src={item.pictureURL} alt={item.title} height="50px" width="50px"></img>
+        <img src={item.pictureURL} alt={item.title} height="70px" width="70px"></img>
         <p>{item.title} ${item.price}</p>
         <div>
             <NavLink to={`/item/${item.id}`}>Ver detalle</NavLink>

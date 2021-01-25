@@ -20,16 +20,23 @@ const CartProvider = ({children}) => {
     //chuequea si el producto ya fue agregado, si no, lo agrega
     const isInCart = (producto)=> {
         const existe = cart.find(element => element.producto.id === producto.producto.id)
-        console.log(existe)
+        /* console.log(existe) */
         if (!existe) {setCart(cart => [...cart, producto])}
             else{alert("El producto ya se encuentra en el carrito.")}
     }
     
     //remover un item del carrito usando su id
     const removeItem = (itemId)=> {
+        quitarItem(itemId, borrarItem)
+    }
+
+    const quitarItem = (itemId, callback)=> {
         const index = cart.indexOf(cart.find(element => element.producto.id === itemId))
-        if (index) {cart.splice(index, 1)}
-        //FALTA TESTEAR
+        callback(index)
+    }
+
+    const borrarItem = (index)=> {
+        setCart(cart.splice(index, 1))
     }
 
     //remover todos los items
@@ -37,7 +44,6 @@ const CartProvider = ({children}) => {
         setCart([])
     }
 
-    
 
     return (
         <Provider value={{addItem, removeItem, clear, cart}}>
