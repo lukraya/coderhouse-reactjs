@@ -4,15 +4,15 @@ import { contexto } from '../CartContext'
 import CartItem from './CartItem'
 
 const Cart = () => {
-  const {cart, clear} = useContext(contexto)
-  /* console.log(cart) */  
-
+  const {cart, precioTotal, clear} = useContext(contexto)
+  /* console.log(cart) */
+  
     return (
         <div className="cart">
           {cart.length > 0 ?
           <>
           {cart.map(item=>{return <CartItem key={item.producto.id} item={item}/>})}
-          <p>Total: $</p>
+          <p>Total: ${precioTotal()}</p>
           <button onClick={clear}>Vaciar el carrito</button>
           </>
           : <>

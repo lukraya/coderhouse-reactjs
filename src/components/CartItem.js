@@ -4,7 +4,7 @@ import './styles.css'
 
 const CartItem = ({item})=> {
     /* console.log(item) */
-    const {cantidad, producto} = item
+    const {cantidad, producto, subtotal} = item
     const {removeItem} = useContext(contexto)
    
     return (<div className="productoCart">
@@ -12,8 +12,8 @@ const CartItem = ({item})=> {
         <img src={producto.pictureURL} alt={producto.title} height="70px" width="70px"></img>
         <p>Precio: ${producto.price}</p>
         <p>Cantidad: {cantidad}</p>
-        <p>Subtotal: ${producto.price * cantidad}</p>
-        <button onClick={()=>removeItem(producto.id)}>Quitar del carrito</button>
+        <p>Subtotal: ${subtotal}</p>
+        <button onClick={()=>removeItem(producto.id, cantidad)}>Quitar del carrito</button>
     </div>)
 }
 

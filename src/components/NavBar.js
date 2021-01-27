@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import './styles.css';
 import CartWidget from './CartWidget';
+import { contexto } from '../CartContext';
 
 const NavBar = () => {
+    const {cart} = useContext(contexto)
+
     return (
         <nav>
             <NavLink to="/" exact id="brand">Coder Kiosco</NavLink>
@@ -13,7 +16,7 @@ const NavBar = () => {
                     <li className="categorias"><NavLink to="/category/Galletitas">Galletitas</NavLink></li>
                     <li className="categorias"><NavLink to="/category/Alfajores">Alfajores</NavLink></li>
                 </ul>
-                <CartWidget/>
+                {cart.length > 0 ? <CartWidget/> : null}
             </div>
         </nav>
     )

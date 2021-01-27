@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './styles.css';
 import cartIcon from './media/cartIcon.jpg';
 import { NavLink } from 'react-router-dom';
+import { contexto } from '../CartContext';
 
-const CartWidget = () => <NavLink to="/cart" id="cartWidget">
-    <img src={cartIcon} alt="Icono de carrito" width="30px" height="30px"></img>
-</NavLink>;
+const CartWidget = () => {
+    const {cantidadTotal} = useContext(contexto)
+
+    return (
+        <NavLink to="/cart" id="cartWidget">
+            <img src={cartIcon} alt="Icono de carrito" width="35px" height="35px"></img>
+            <div>{cantidadTotal}</div>
+        </NavLink>
+    )
+}
 
 export default CartWidget;
+
+//probar si al meter el div con la cant en img, se superpone visualmente
