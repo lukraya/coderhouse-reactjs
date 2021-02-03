@@ -29,7 +29,7 @@
         "id": 4,
         "categoria": "Galletitas",
         "title": "Pepitos",
-        "description":"Pepitos", 
+        "description":"Galletitas con chips de chocolate", 
         "price":50,
         "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWrnDCREcGronwiMXfjyq7juWVdcs9kyabeo-TCY-_LXwv_GmN0bv2RUMjnQ460gxjfAOP8VnL&usqp=CAc"
     },
@@ -38,7 +38,7 @@
         "id": 5,
         "categoria": "Galletitas",
         "title": "Sonrisas",
-        "description":"Sonrisas", 
+        "description":"Galletias de vainilla con relleno de frutilla", 
         "price":50,
         "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBy2b3iKJQEVgKVEA0V1_pvnyTJPmsTUTYQZxB_m338QpPkgbYb6a86ddOknM9SfntnqcOOevDcQ&usqp=CAc"
     },
@@ -47,7 +47,7 @@
         "id": 6,
         "categoria": "Galletitas",
         "title": "Oreo",
-        "description":"Oreo", 
+        "description":"Galletitas de chocolate con relleno de vainilla", 
         "price":50,
         "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXqjEQkfm1L42h-NHngD_hmwImshH_-Kh2B0YCpZTkgP0E8m7TbOPVV9xwbU7-rlJvjLsCaOFK&usqp=CAc"
     },
@@ -56,7 +56,7 @@
         "id": 7,
         "categoria": "Alfajores",
         "title":"Jorgito",
-        "description":"Alfajor de chocolate", 
+        "description":"Alfajor relleno con dulce de leche, bañado en chocolate", 
         "price":30,
         "pictureURL": "https://www.distribuidorapop.com.ar/wp-content/uploads/2016/08/alfajor-jorgito-chocolate-venta.jpg" 
     },
@@ -65,7 +65,7 @@
         "id": 8, 
         "categoria": "Alfajores",
         "title":"Milka Oreo", 
-        "description":"Alfajor triple", 
+        "description":"Alfajor triple, sabor Oreo, bañado en chocolate", 
         "price":40,
         "pictureURL": "https://http2.mlstatic.com/alfajor-milka-torta-oreo-61g-x-12u-gomarket-mayorista-D_NQ_NP_811865-MLA32318711592_092019-Q.jpg" 
     },
@@ -74,7 +74,7 @@
         "id": 9, 
         "categoria": "Alfajores",
         "title":"Shot", 
-        "description":"Alfajor triple", 
+        "description":"Alfajor triple con maní", 
         "price":40,
         "pictureURL": "https://statics.dinoonline.com.ar/imagenes/full_600x600_ma/2181250_f.jpg" 
     }
