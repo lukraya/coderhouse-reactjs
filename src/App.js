@@ -6,14 +6,14 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import CartProvider from './CartContext';
-import {firestore} from './firebase'
+/* import {firestore} from './firebase' */
 
 const App = () => {
 
-  useEffect(()=>{
+  /* useEffect(()=>{
     const itemsCollection = firestore.collection("items")
     
-    /* const query = itemsCollection.get()
+    const query = itemsCollection.get()
     query
     .then((resultado)=>{
       resultado.docs.forEach((doc)=>{
@@ -23,7 +23,7 @@ const App = () => {
     })
     .catch((err)=>{
       console.log(err)
-    }) */
+    })
 
     const query = itemsCollection.where("categoria", "==", "Bebidas")
     query.get().then((res)=>{
@@ -31,7 +31,7 @@ const App = () => {
         console.log(doc.data())
       })
     }) 
-  })
+  }) */
 
 
 

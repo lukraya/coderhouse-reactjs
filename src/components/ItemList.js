@@ -1,9 +1,6 @@
 import React from 'react';
 import './styles.css';
 import Item from './Item';
-/* import jorgito from './media/alfajor-jorgito-chocolate.jpg';
-import milka from './media/alfajor-milka-oreo.jpg';
-import shot from './media/alfajor-shot-triple.jpg'; */
 
 const ItemList = ({items})=> {
     /* console.log(items) */
