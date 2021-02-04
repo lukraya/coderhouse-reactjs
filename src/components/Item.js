@@ -3,7 +3,6 @@ import {NavLink} from 'react-router-dom';
 import './styles.css';
 
 const Item = ({item})=> {
-    /* console.log(item.pictureURL); */
     /* console.log(item.id)
     console.log(item.data) */
     const {data} = item

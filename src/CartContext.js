@@ -27,7 +27,7 @@ const CartProvider = ({children}) => {
         if (!existe) {
             setCart(cart => [...cart, producto])
             setCantidadTotal(cantidadTotal + quantity)
-            console.log(cantidadTotal)
+            /* console.log(cantidadTotal) */
         }
         else{alert("El producto ya se encuentra en el carrito.")}
     }
@@ -46,20 +46,11 @@ const CartProvider = ({children}) => {
 
     const borrarItem = (index, quantity)=> {
         cart.splice(index, 1)
-        //acá veo que al hacer click en "Quitar item" se elimina el objeto del array, pero no re-renderiza Cart.js
-        console.log(cart)
+        /* console.log(cart) */
         setCart(cart)
-        /* const newCart = cart
-        newCart.splice(index, 1)
-        console.log(newCart)
-        setCart(newCart) */
         setCantidadTotal(cantidadTotal - quantity)
     }
-    //Probé: a)crear en Cart.js un estado con el array cart consumiendo con useContext
-    //b)crear un CartContainer.js para que consuma el contexto y pase cart por props a Cart.js
-    //c)mutar una copia del array y guardar ese array mutado como cart con setCart
-    //(probé también limpiar el caché)
-    //UPDATE: ANDA. Lo único que hice fue agregar el estado de cantTotal y agregar quantity como parametro, algo totalmente paralelo
+    
 
     //remover todos los items
     const clear = ()=> {
@@ -71,12 +62,7 @@ const CartProvider = ({children}) => {
         return cart.reduce((suma, producto)=>suma + producto.subtotal, 0)
     }
 
-    //suma la cantidad total de productos en el carrito --- NO FUNCIONA
-    /* const cantidadTotal = ()=>{
-        return cart.reduce((suma, cantidad)=>suma + cantidad, 0)
-    } */
-
-    console.log(cart)
+    /* console.log(cart) */
 
     return (
         <Provider value={{cart, addItem, removeItem, clear, precioTotal, cantidadTotal}}>

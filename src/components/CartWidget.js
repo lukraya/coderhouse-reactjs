@@ -16,5 +16,3 @@ const CartWidget = () => {
 }
 
 export default CartWidget;
-
-//probar si al meter el div con la cant en img, se superpone visualmente

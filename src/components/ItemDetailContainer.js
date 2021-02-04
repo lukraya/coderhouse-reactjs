@@ -2,31 +2,41 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import './styles.css';
 import ItemDetail from './ItemDetail';
+import { firestore } from '../firebase';
 
 const ItemDetailContainer = ()=> {
     const [item,setItem] = useState();
     const {id} = useParams();
 
-    useEffect(()=>{       
-        let getProductos = fetch("../productos.json")
+    useEffect(()=>{
+        setItem()
+        const itemsCollection = firestore.collection("items")
 
-        getProductos
-        .then((resultados)=>{
-            return resultados.json()
-        })
-        .then((resultados)=>{
-            setTimeout(()=>{
-                if(id){
-                    /* console.log(resultados) */
-                    /* console.log(id) */                    
-                    let resultado = resultados.filter(resultado=>resultado.id==id)[0]
-                    /* console.log(resultado) */
-                    setItem(resultado)
-                }
-            },2000)
-        })
+        if(id){
+            const itemId = id
+            /* console.log(itemId) */
+            const query = itemsCollection.get()
+            query
+            .then((resultados)=>{
+                /* console.log(resultados.docs) */
+                const arrayDocs = resultados.docs
+                const resultado = (arrayDocs.filter(doc=>doc.id===id)[0]).data()
+                /* console.log(resultado) */
+                const res = {   id: itemId,
+                                categoria: resultado.categoria,
+                                title: resultado.title,
+                                price: resultado.price,
+                                description: resultado.description,
+                                pictureURL: resultado.pictureURL    }
+                setItem(res)
+            })
+            .catch((err)=>{
+                console.log(err)
+            })
+        }
+
     }, [id])
-    /* console.log(item) */
+    
 
     return (<div>
         {item ? <ItemDetail item={item}/> : <p>Cargando detalles</p>}

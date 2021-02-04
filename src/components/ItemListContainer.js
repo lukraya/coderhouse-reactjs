@@ -8,25 +8,8 @@ const ItemListContainer = ({greeting}) => {
     const [items,setItems] = useState([]);
     const {id} = useParams();
 
-    /* useEffect(()=>{
-        let getProductos = fetch("../productos.json")
-
-        getProductos
-        .then((resultado)=>{
-            return resultado.json()
-        })
-        .then((resultado)=>{
-            setTimeout(()=>{
-                if(id){
-                    setItems(resultado.filter(item=>item.categoria===id))
-                }else{
-                    setItems(resultado)
-                }
-            },2000)
-        })       
-    }, [id]) */
-
     useEffect(()=>{
+        setItems([])
         const itemsCollection = firestore.collection("items")
 
         if(id){
