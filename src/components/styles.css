@@ -95,3 +95,18 @@ a:hover {
     display: inline-block;
     margin: 10px 15px 10px 0px;
 }
+
+/* ESTILOS CHECKOUT */
+.checkout {
+    padding: 15px;
+}
+
+.formItem {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.formItem input {
+    box-sizing: border-box;
+    width: 100%;
+}

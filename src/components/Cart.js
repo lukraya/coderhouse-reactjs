@@ -8,18 +8,19 @@ const Cart = () => {
   /* console.log(cart) */
   
     return (
-        <div className="cart">
-          {cart.length > 0 ?
-          <>
-          {cart.map(item=>{return <CartItem key={item.producto.id} item={item}/>})}
-          <p>Total: ${precioTotal()}</p>
-          <button onClick={clear}>Vaciar el carrito</button>
-          </>
-          : <>
-              <p>No hay productos en el carrito aún.</p>
-              <button><NavLink to="/">Ir a la tienda</NavLink></button>
-            </>}
-        </div>
+      <div className="cart">
+        {cart.length > 0 ?
+        <>
+        {cart.map(item=>{return <CartItem key={item.producto.id} item={item}/>})}
+        <p>Total: ${precioTotal()}</p>
+        <button onClick={clear}>Vaciar el carrito</button>
+        <button><NavLink to="/checkout">Comprar</NavLink></button>
+        </>
+        : <>
+            <p>No hay productos en el carrito aún.</p>
+            <button><NavLink to="/">Ir a la tienda</NavLink></button>
+          </>}
+      </div>
     )
 }
 
