@@ -13,14 +13,14 @@ const ItemDetailContainer = ()=> {
         const itemsCollection = firestore.collection("items")
 
         if(id){
-            const itemId = id
+            const itemId = id //creo q es innecesario
             /* console.log(itemId) */
             const query = itemsCollection.get()
             query
             .then((resultados)=>{
                 /* console.log(resultados.docs) */
                 const arrayDocs = resultados.docs
-                const resultado = (arrayDocs.filter(doc=>doc.id===id)[0]).data()
+                const resultado = (arrayDocs.filter(doc=>doc.id===id)[0]).data() //probar find()
                 /* console.log(resultado) */
                 const res = {   id: itemId,
                                 categoria: resultado.categoria,

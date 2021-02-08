@@ -6,7 +6,7 @@ import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import CartProvider from './CartContext';
-import CheckoutContainer from './components/CheckoutContainer';
+import Checkout from './components/Checkout';
 
 const App = () => {
 
@@ -29,7 +29,7 @@ const App = () => {
               <Cart/>
             </Route>
             <Route path="/checkout">
-              <CheckoutContainer/>
+              <Checkout/>
             </Route>
           </Switch>
         </main>
