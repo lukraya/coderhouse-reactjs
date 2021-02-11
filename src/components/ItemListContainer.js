@@ -15,13 +15,11 @@ const ItemListContainer = ({greeting}) => {
         if(id){
             const query = itemsCollection.where("categoria","==",id)
             query.get()
-            .then((resultado)=>{
-                /* console.log(resultado.docs) */
+            .then((resultado)=>{                
                 resultado.docs.forEach((doc)=>{
                     const item = {  id: doc.id,
-                                    data: doc.data()    }
-                    setItems(items => [...items, item])
-                    /* console.log(items) */
+                                    ...doc.data()    }
+                    setItems(items => [...items, item])                    
                 })
             })
             .catch((err)=>{
@@ -33,7 +31,7 @@ const ItemListContainer = ({greeting}) => {
             .then((resultado)=>{
                 resultado.docs.forEach((doc)=>{
                     const item = {  id: doc.id,
-                                    data: doc.data()    }
+                                    ...doc.data()    }
                     setItems(items => [...items, item])
                 })
             })
@@ -43,10 +41,11 @@ const ItemListContainer = ({greeting}) => {
         }
     }, [id])
 
-    return (<>
-        <h1>{greeting}</h1>
-        <ItemList items={items}/>
-    </>
+    return (
+        <>
+            <h1>{greeting}</h1>
+            <ItemList items={items}/>
+        </>
     )
 } 
 

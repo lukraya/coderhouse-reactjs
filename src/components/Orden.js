@@ -12,7 +12,6 @@ const Orden = (orden) => {
             orders.add(orden)
             .then(({id})=>{
                 setOrdenId(id)
-                console.log(id)
             })
             .catch((err)=>{
                 console.log(err)
@@ -21,17 +20,17 @@ const Orden = (orden) => {
         
     },[ordenId, orden])
 
-    console.log("Render Orden")
-
-    return (<>{ordenId ?
-                <>
-                    <p>Orden de compra número: {ordenId}</p>
-                    {/* <p>Detalles:</p> */}
-                    <p>Gracias por su compra!</p>
-                </>
-                :
-                <><p>Generando su orden</p></>
-    }</>)
+    
+    return (
+        <div className="orden">{ordenId ?
+            <>
+                <p>Orden de compra número: {ordenId}</p>                    
+                <p>Gracias por su compra!</p>
+            </>
+            :
+            <><p>Generando su orden</p></>
+        }</div>
+    )
 }
 
 export default Orden

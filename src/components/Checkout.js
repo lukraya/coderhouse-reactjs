@@ -4,10 +4,9 @@ import Orden from './Orden'
 
 const Checkout = () => {
     const [orden, setOrden] = useState()
-    const {cart, precioTotal} = useContext(contexto)
+    const {cart, precioTotal, clear} = useContext(contexto)
 
     //Obtener y crear el objeto usuario
-    /* const [usuario, setUsuario] = useState() */
     const [name, setName] = useState()
     const [phone, setPhone] = useState()
     const [email, setEmail] = useState()
@@ -17,22 +16,17 @@ const Checkout = () => {
         const nuevoUsuario = {  nombre: name,
                                 telefono: phone,
                                 correo: email   }
-        /* setUsuario(nuevoUsuario) */
         crearOrden(nuevoUsuario, setOrden)
     }
+
     const crearOrden = (usuario, callback)=>{
         const newOrden = {  buyer: usuario,
                             items: cart,
                             total: precioTotal()    }
         callback(newOrden)
     }
-    //Será que al hacer setOrden, rerenderiza y los estados de name, phone y email quedan vacíos, 
-    //de ahí que en Orden.js diga que buyer is undefined?
-
-    /* console.log(usuario) */
-    console.log("Render Checkout")
-       
-
+    
+    
     return (
         <>{!orden ?
             (<div className="checkout">
@@ -50,7 +44,7 @@ const Checkout = () => {
                         <label htmlFor="email">Email: </label>
                         <input onChange={(e)=>{setEmail(e.target.value)}} id="email" type="email" name="email" placeholder="jperez@email.com" required></input>
                     </div>
-                    <button type="submit">Terminar</button>
+                    <button type="submit" onClick={clear}>Terminar</button>
                 </form>
                 
             </div>)

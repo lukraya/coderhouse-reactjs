@@ -5,7 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { contexto } from '../CartContext';
 
 const ItemDetail = ({item})=> {
-    /* console.log(item) */
     const [stock,setStock] = useState(10)
     const [initial,setInitial] = useState(1)
     const [cantItem, setCantItem] = useState()
@@ -13,9 +12,9 @@ const ItemDetail = ({item})=> {
     const {addItem} = useContext(contexto)
 
     const onAdd = ()=>{
-        //efectuar cambios en el stock
+        //Efectuar cambios en el stock
         handleStock()
-        //mandar la info del item y su cant al contexto
+        //Mandar la info del item y su cant al contexto
         addItem(item, initial)        
     }
     const handleStock = ()=> {
@@ -35,22 +34,22 @@ const ItemDetail = ({item})=> {
             setInitial(initial-1)
         }      
     }
-    
-/*     console.log(cantItem) */
 
-    return (<div id="itemDetail">
-        <h4>{item.title}</h4>
-        <p>Descripción: {item.description}</p>
-        <p>Precio: ${item.price}</p>
-        <img src={item.pictureURL} alt="Imagen de producto" height="70px" width="70px"></img>
-        {cantItem ? 
-            <>
-                <button><NavLink to="/cart">Terminar mi compra</NavLink></button>
-                <button><NavLink to="/">Seguir comprando</NavLink></button>
-            </>
-            : <ItemCount onAdd={onAdd} onSumar={onSumar} onRestar={onRestar} initial={initial}/>
-        }
-    </div>)
+    return (
+        <div id="itemDetail">
+            <h4>{item.title}</h4>
+            <p>Descripción: {item.description}</p>
+            <p>Precio: ${item.price}</p>
+            <img src={item.pictureURL} alt="Imagen de producto" height="70px" width="70px"></img>
+            {cantItem ? 
+                <>
+                    <button><NavLink to="/cart">Terminar mi compra</NavLink></button>
+                    <button><NavLink to="/">Seguir comprando</NavLink></button>
+                </>
+                : <ItemCount onAdd={onAdd} onSumar={onSumar} onRestar={onRestar} initial={initial}/>
+            }
+        </div>
+    )
 }
 
 export default ItemDetail;

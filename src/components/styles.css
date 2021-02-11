@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 }
 
+p {
+    margin: 0;
+}
+
 /* ESTILOS NAVBAR */
 nav {
     display: flex;
@@ -10,41 +14,34 @@ nav {
     padding:0px 5px;
     font-size: 20px;
 }
-
 #brand {
     padding: 10px;
     background-color: blueviolet;
     color: white;
     margin: 10px 0px;
 }
-
 #menuDerecha {
     display: flex;
     flex-direction: row;
     margin-right: 10px;
 }
-
 #menu {
     display: flex;
     flex-direction: row;
     margin: 10px 10px 10px 0px;
 }
-
 .categorias {
     margin-left: 10px;
     padding: 10px;
     list-style-type: none;
 }
-
 a {
     text-decoration: none;
     color: black;
 }
-
 a:hover {
     color: blueviolet;
 }
-
 #cartWidget {
     display: flex;
     align-items: center;
@@ -57,31 +54,38 @@ a:hover {
     justify-content: space-around;
 }
 
+/* ESTILOS ITEM */
+.item {
+    margin-right: 10px;
+}
+.itemP {
+    margin: 10px 0px
+}
+
 /* ESTILOS ITEMDETAIL */
 #itemDetail {
     margin-left: 10px;
     margin-top: 20px;
 }
-
+#itemDetail h4 {
+    margin: 0px 0px 10px 0px
+}
 #itemDetail p {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* ESTILOS ITEMCOUNT */
 #itemCount {
     margin-left: 10px;
 }
-
 #seleccionCant {
     display: flex;
     justify-content: space-between;
     width: 150px;
 }
-
 #seleccionCant p {
     margin: 0;
 }
-
 #agregar {
     margin-top: 10px;
 }
@@ -90,23 +94,45 @@ a:hover {
 .cart {
     padding: 15px;
 }
-
+.cart p {
+    margin-bottom: 5px;
+}
+.cart button {
+    display: block;
+    margin-bottom: 10px;
+}
 .productoCart {
     display: inline-block;
     margin: 10px 15px 10px 0px;
+}
+.productoCart h4 {
+    margin: 0px 0px 10px 0px
+}
+.productoCart p {
+    margin-top: 5px;
+}
+.productoCart button {
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 /* ESTILOS CHECKOUT */
 .checkout {
     padding: 15px;
 }
-
+.checkout p {
+    margin-bottom: 10px;
+}
 .formItem {
     margin-bottom: 10px;
     width: 200px;
 }
-
 .formItem input {
     box-sizing: border-box;
     width: 100%;
+}
+
+/* ESTILOS ORDEN */
+.orden {
+    padding: 15px;
 }
