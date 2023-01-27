@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
-import './styles.css';
-import ItemCount from './ItemCount';
 import { NavLink } from 'react-router-dom';
 import { contexto } from '../CartContext';
+import '../styles.css';
+import ItemCount from '../views/ItemCount';
 
 const ItemDetail = ({item})=> {
     const [stock,setStock] = useState(10)
@@ -11,19 +11,19 @@ const ItemDetail = ({item})=> {
 
     const {addItem} = useContext(contexto)
 
+    const handleStock = ()=> {
+        if(stock>0) {
+            setStock(stock-initial)
+            setCantItem(initial)         
+        }
+    }
     const onAdd = ()=>{
         //Efectuar cambios en el stock
         handleStock()
         //Mandar la info del item y su cant al contexto
         addItem(item, initial)        
     }
-    const handleStock = ()=> {
-        if(stock>0) {
-            setStock(stock-initial)
-            setCantItem(initial)         
-        }
-    }    
-
+    
     const onSumar = () => {
         if (initial<stock) {
             setInitial(initial+1)

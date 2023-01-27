@@ -11,6 +11,13 @@ const Checkout = () => {
     const [phone, setPhone] = useState()
     const [email, setEmail] = useState()
 
+    const crearOrden = (usuario, callback)=>{
+        const newOrden = {  buyer: usuario,
+                            items: cart,
+                            total: precioTotal()    }
+        callback(newOrden)
+    }
+
     const getUsuario = (e)=>{
         e.preventDefault()
         const nuevoUsuario = {  nombre: name,
@@ -18,15 +25,7 @@ const Checkout = () => {
                                 correo: email   }
         crearOrden(nuevoUsuario, setOrden)
     }
-
-    const crearOrden = (usuario, callback)=>{
-        const newOrden = {  buyer: usuario,
-                            items: cart,
-                            total: precioTotal()    }
-        callback(newOrden)
-    }
-    
-    
+       
     return (
         <>{!orden ?
             (<div className="checkout">

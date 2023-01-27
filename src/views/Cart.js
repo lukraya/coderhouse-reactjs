@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
 import { contexto } from '../CartContext'
+import '../styles.css'
 import CartItem from './CartItem'
 
 const Cart = () => {

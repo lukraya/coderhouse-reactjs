@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import { contexto } from '../CartContext'
-import './styles.css'
+import '../styles.css'
 
 const CartItem = ({item})=> {
     const {cantidad, producto, subtotal} = item

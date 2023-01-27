@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import './styles.css';
-import ItemList from './ItemList';
-import {firestore} from '../firebase'
+import {firestore} from '../firebase';
+import '../styles.css';
+import ItemList from '../views/ItemList';
 
 const ItemListContainer = ({greeting}) => {
     const [items,setItems] = useState([]);
@@ -73,6 +73,7 @@ const ItemListContainer = ({greeting}) => {
         }
     }, [id])
 
+    //Pasar el greeting/titulo a ItemList?
     return (
         <>
             <h1>{greeting}</h1>

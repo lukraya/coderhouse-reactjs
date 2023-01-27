@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import './styles.css';
-import cartIcon from './media/cartIcon.jpg';
 import { NavLink } from 'react-router-dom';
 import { contexto } from '../CartContext';
+import '../styles.css';
+import cartIcon from '../media/cartIcon.jpg';
 
 const CartWidget = () => {
     const {cantidadTotal} = useContext(contexto)

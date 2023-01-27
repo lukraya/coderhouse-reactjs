@@ -1,3 +1,21 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+.footerText {
+    text-align: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -11,37 +29,44 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding:0px 5px;
+    padding: 0px 5px;
     font-size: 20px;
 }
+
 #brand {
     padding: 10px;
     background-color: blueviolet;
     color: white;
     margin: 10px 0px;
 }
+
 #menuDerecha {
     display: flex;
     flex-direction: row;
     margin-right: 10px;
 }
+
 #menu {
     display: flex;
     flex-direction: row;
     margin: 10px 10px 10px 0px;
 }
+
 .categorias {
     margin-left: 10px;
     padding: 10px;
     list-style-type: none;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
+
 a:hover {
     color: blueviolet;
 }
+
 #cartWidget {
     display: flex;
     align-items: center;
@@ -58,6 +83,7 @@ a:hover {
 .item {
     margin-right: 10px;
 }
+
 .itemP {
     margin: 10px 0px
 }
@@ -67,9 +93,11 @@ a:hover {
     margin-left: 10px;
     margin-top: 20px;
 }
+
 #itemDetail h4 {
     margin: 0px 0px 10px 0px
 }
+
 #itemDetail p {
     margin-bottom: 10px;
 }
@@ -78,14 +106,17 @@ a:hover {
 #itemCount {
     margin-left: 10px;
 }
+
 #seleccionCant {
     display: flex;
     justify-content: space-between;
     width: 150px;
 }
+
 #seleccionCant p {
     margin: 0;
 }
+
 #agregar {
     margin-top: 10px;
 }
@@ -94,23 +125,29 @@ a:hover {
 .cart {
     padding: 15px;
 }
+
 .cart p {
     margin-bottom: 5px;
 }
+
 .cart button {
     display: block;
     margin-bottom: 10px;
 }
+
 .productoCart {
     display: inline-block;
     margin: 10px 15px 10px 0px;
 }
+
 .productoCart h4 {
     margin: 0px 0px 10px 0px
 }
+
 .productoCart p {
     margin-top: 5px;
 }
+
 .productoCart button {
     margin-bottom: 0;
     margin-top: 5px;
@@ -120,13 +157,16 @@ a:hover {
 .checkout {
     padding: 15px;
 }
+
 .checkout p {
     margin-bottom: 10px;
 }
+
 .formItem {
     margin-bottom: 10px;
     width: 200px;
 }
+
 .formItem input {
     box-sizing: border-box;
     width: 100%;

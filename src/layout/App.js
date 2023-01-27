@@ -1,20 +1,21 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './components/styles.css';
-import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import Cart from './components/Cart';
-import CartProvider from './CartContext';
-import Checkout from './components/Checkout';
+import '../styles.css';
+import NavBar from './NavBar';
+import ItemListContainer from '../containers/ItemListContainer';
+import ItemDetailContainer from '../containers/ItemDetailContainer';
+import Cart from '../views/Cart';
+import CartProvider from '../CartContext';
+import Checkout from '../containers/Checkout';
+import Footer from './Footer';
 
 const App = () => {
 
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <NavBar/>
-        <main>
+    <>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar/>
           <Switch>
             <Route path="/" exact>
               <ItemListContainer greeting="Bienvenidos a la tienda"/>
@@ -32,9 +33,10 @@ const App = () => {
               <Checkout/>
             </Route>
           </Switch>
-        </main>
-      </BrowserRouter>
-    </CartProvider>
+        </BrowserRouter>
+      </CartProvider>
+      <Footer/>
+    </>
   )
 }
 

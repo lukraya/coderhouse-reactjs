@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import './styles.css';
-import ItemDetail from './ItemDetail';
 import { firestore } from '../firebase';
+import '../styles.css';
+import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = ()=> {
     const [item,setItem] = useState();
@@ -13,7 +13,7 @@ const ItemDetailContainer = ()=> {
         const itemsCollection = firestore.collection("items")
 
         if(id){            
-            const query = itemsCollection.get()
+            const query = itemsCollection.get() //debería hacer un where acá?
             query
             .then((resultados)=>{
                 const arrayDocs = resultados.docs                
