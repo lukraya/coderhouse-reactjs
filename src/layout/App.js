@@ -1,12 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import '../styles.css';
+/* import '../styles.css'; */
+//Ya me llegan los estilos???
 import NavBar from './NavBar';
 import ItemListContainer from '../containers/ItemListContainer';
 import ItemDetailContainer from '../containers/ItemDetailContainer';
 import Cart from '../views/Cart';
 import CartProvider from '../CartContext';
-import Checkout from '../containers/Checkout';
+import CheckoutContainer from '../containers/CheckoutContainer';
 import Footer from './Footer';
 
 const App = () => {
@@ -18,10 +19,10 @@ const App = () => {
           <NavBar/>
           <Switch>
             <Route path="/" exact>
-              <ItemListContainer greeting="Bienvenidos a la tienda"/>
+              <ItemListContainer /* greeting="Bienvenidos a la tienda" *//>
             </Route>
             <Route path="/category/:id">
-              <ItemListContainer greeting="Bienvenidos a la tienda"/>
+              <ItemListContainer /* greeting="Bienvenidos a la tienda" *//>
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer/>
@@ -30,7 +31,7 @@ const App = () => {
               <Cart/>
             </Route>
             <Route path="/checkout">
-              <Checkout/>
+              <CheckoutContainer/>
             </Route>
           </Switch>
         </BrowserRouter>

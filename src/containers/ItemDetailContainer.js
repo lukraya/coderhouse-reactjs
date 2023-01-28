@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
 import { firestore } from '../firebase';
 import '../styles.css';
+import Main from '../layout/Main';
 import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = ()=> {
@@ -29,9 +30,9 @@ const ItemDetailContainer = ()=> {
     }, [id])
     
     return (
-        <div>
+        <Main>
             {item ? <ItemDetail item={item}/> : <p>Cargando detalles</p>}
-        </div>
+        </Main>
     )
 }
 

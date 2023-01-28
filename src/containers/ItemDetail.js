@@ -1,8 +1,9 @@
 import React, {useContext, useState} from 'react';
-import { NavLink } from 'react-router-dom';
 import { contexto } from '../CartContext';
 import '../styles.css';
 import ItemCount from '../views/ItemCount';
+import ItemDetailButtons from '../views/ItemDetailButtons';
+import ItemDetailInfo from '../views/ItemDetailInfo';
 
 const ItemDetail = ({item})=> {
     const [stock,setStock] = useState(10)
@@ -35,17 +36,12 @@ const ItemDetail = ({item})=> {
         }      
     }
 
+    
     return (
         <div id="itemDetail">
-            <h4>{item.title}</h4>
-            <p>Descripción: {item.description}</p>
-            <p>Precio: ${item.price}</p>
-            <img src={item.pictureURL} alt="Imagen de producto" height="70px" width="70px"></img>
+            <ItemDetailInfo item={item}/>
             {cantItem ? 
-                <>
-                    <button><NavLink to="/cart">Terminar mi compra</NavLink></button>
-                    <button><NavLink to="/">Seguir comprando</NavLink></button>
-                </>
+                <ItemDetailButtons/>
                 : <ItemCount onAdd={onAdd} onSumar={onSumar} onRestar={onRestar} initial={initial}/>
             }
         </div>

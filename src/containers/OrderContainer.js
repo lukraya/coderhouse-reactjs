@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import { firestore } from '../firebase'
+import Order from '../views/Order'
 
-const Orden = (orden) => {
+const OrderContainer = (orden) => {
     console.log(orden)
     const [ordenId, setOrdenId] = useState()
     
     //Preparar nueva orden y crear doc en firestore
     useEffect(()=>{
         const orders = firestore.collection("orders")
+        //Hace falta el if?
         if (!ordenId) {
             orders.add(orden)
             .then(({id})=>{
@@ -16,21 +18,13 @@ const Orden = (orden) => {
             .catch((err)=>{
                 console.log(err)
             })
-        }
-        
+        }        
     },[ordenId, orden])
 
-    
+
     return (
-        <div className="orden">{ordenId ?
-            <>
-                <p>Orden de compra número: {ordenId}</p>                    
-                <p>Gracias por su compra!</p>
-            </>
-            :
-            <><p>Generando su orden</p></>
-        }</div>
+        <Order ordenId={ordenId}/>
     )
 }
 
-export default Orden
+export default OrderContainer

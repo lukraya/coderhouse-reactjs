@@ -73,10 +73,10 @@ const ItemListContainer = ({greeting}) => {
         }
     }, [id])
 
-    //Pasar el greeting/titulo a ItemList?
+    
     return (
         <>
-            <h1>{greeting}</h1>
+            {/* <h1>{greeting}</h1> */}
             <ItemList items={items}/>
         </>
     )
