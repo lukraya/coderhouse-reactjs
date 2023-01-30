@@ -11,10 +11,12 @@ const ItemDetailContainer = ()=> {
 
     useEffect(()=>{
         setItem()
+
         const itemsCollection = firestore.collection("items")
 
+        //where: trabaja sobre un campo del documento, not for ID
         if(id){            
-            const query = itemsCollection.get() //debería hacer un where acá?
+            const query = itemsCollection.get()
             query
             .then((resultados)=>{
                 const arrayDocs = resultados.docs                

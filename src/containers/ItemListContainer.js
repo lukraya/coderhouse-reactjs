@@ -75,10 +75,7 @@ const ItemListContainer = ({greeting}) => {
 
     
     return (
-        <>
-            {/* <h1>{greeting}</h1> */}
-            <ItemList items={items}/>
-        </>
+        <ItemList items={items}/>
     )
 } 
 

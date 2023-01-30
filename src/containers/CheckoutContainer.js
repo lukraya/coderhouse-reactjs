@@ -7,8 +7,6 @@ import OrderContainer from './OrderContainer'
 const CheckoutContainer = () => {
     const [orden, setOrden] = useState()
     const {cart, precioTotal, clear} = useContext(contexto)
-    //ESTOY VACIANDO EL CART ANTES DE GUARDAR EL ARRAY PARA ORDER
-
 
     //Obtener y crear el objeto usuario
     const [name, setName] = useState()
@@ -27,12 +25,14 @@ const CheckoutContainer = () => {
         setEmail(email)
     }
 
-    //Agregar fecha
     const crearOrden = (usuario, callback)=>{
         const newOrden = {  buyer: usuario,
                             items: cart,
-                            total: precioTotal()    }
+                            total: precioTotal(),
+                            date: new Date().toLocaleString()   }
         callback(newOrden)
+        //Moví clear del onClick en el botón submit, xq se ejecutaba antes de copiar el cart a la orden
+        clear()
     }
 
     const getUsuario = (e)=>{
@@ -47,7 +47,7 @@ const CheckoutContainer = () => {
     return (
         <Main>
             {!orden ?
-                <CheckoutForm getUsuario={getUsuario} getName={getName} getEmail={getEmail} getPhone={getPhone} clear={clear}/>
+                <CheckoutForm getUsuario={getUsuario} getName={getName} getEmail={getEmail} getPhone={getPhone}/>
                 : <OrderContainer orden={orden}/>        
             }
         </Main>

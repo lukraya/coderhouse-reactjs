@@ -2,7 +2,7 @@ import React from 'react'
 /* import '../styles.css' */
 //Ya me llegan los estilos
 
-const CheckoutForm = ({getUsuario, getName, getEmail, getPhone, clear}) => {
+const CheckoutForm = ({getUsuario, getName, getEmail, getPhone}) => {
 
     return (
         <div className="checkout">
@@ -20,7 +20,7 @@ const CheckoutForm = ({getUsuario, getName, getEmail, getPhone, clear}) => {
                     <label htmlFor="email">Email: </label>
                     <input onChange={(e)=>{getEmail(e.target.value)}} id="email" type="email" name="email" placeholder="jperez@email.com" required></input>
                 </div>
-                <button type="submit" onClick={clear}>Terminar</button>
+                <button type="submit">Terminar</button>
             </form>                    
         </div>
     )
