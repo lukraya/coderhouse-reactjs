@@ -1,8 +1,7 @@
-import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import { app } from '../firebase9';
-//import {firestore} from '../firebase9';
+import {firestore} from '../firebase9';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 import '../styles.css';
 import ItemList from '../views/ItemList';
 
@@ -13,7 +12,6 @@ const ItemListContainer = () => {
     useEffect(()=>{
         setItems([])
         //const itemsCollection = firestore.collection("items")
-        const firestore = getFirestore(app)
         const itemsCollection = collection(firestore, "items")
 
         if(id){
