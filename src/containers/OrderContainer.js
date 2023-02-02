@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { firestore } from '../firebase'
+import { firestore } from '../firebase9'
 import Order from '../views/Order'
 
 const OrderContainer = (orden) => {

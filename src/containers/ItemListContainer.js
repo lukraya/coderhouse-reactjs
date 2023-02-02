@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import {firestore} from '../firebase';
+import {firestore} from '../firebase9';
 import '../styles.css';
 import ItemList from '../views/ItemList';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
     const [items,setItems] = useState([]);
     const {id} = useParams();
 
