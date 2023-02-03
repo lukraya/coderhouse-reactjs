@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import { firestore } from '../firebase9';
+import { firestore } from '../../firebase9';
 import { doc, getDoc } from 'firebase/firestore';
-import '../styles.css';
+/* import '../styles.css'; */
 import Main from '../layout/Main';
 import ItemDetail from './ItemDetail';
 

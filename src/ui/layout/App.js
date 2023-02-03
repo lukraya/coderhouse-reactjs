@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import ItemListContainer from '../containers/ItemListContainer';
 import ItemDetailContainer from '../containers/ItemDetailContainer';
 import Cart from '../views/Cart';
-import CartProvider from '../CartContext';
+import CartProvider from '../../CartContext';
 import CheckoutContainer from '../containers/CheckoutContainer';
 import Footer from './Footer';
 
@@ -19,10 +19,10 @@ const App = () => {
           <NavBar/>
           <Switch>
             <Route path="/" exact>
-              <ItemListContainer /* greeting="Bienvenidos a la tienda" *//>
+              <ItemListContainer/>
             </Route>
             <Route path="/category/:id">
-              <ItemListContainer /* greeting="Bienvenidos a la tienda" *//>
+              <ItemListContainer/>
             </Route>
             <Route path="/item/:id">
               <ItemDetailContainer/>

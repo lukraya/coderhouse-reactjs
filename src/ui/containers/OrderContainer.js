@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { firestore } from '../firebase9'
+import { firestore } from '../../firebase9'
 import { addDoc, collection } from 'firebase/firestore'
 import Order from '../views/Order'
 

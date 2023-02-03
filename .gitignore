@@ -23,8 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # config firebase
-/src/firebase.js
-/src/firebase9.js
+/src/api/firebase9.js
 
 .eslintcache
 folders.txt

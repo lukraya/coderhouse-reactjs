@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react'
-import { contexto } from '../CartContext'
+import { contexto } from '../../CartContext'
 import Main from '../layout/Main'
 import CheckoutForm from '../views/CheckoutForm'
 import OrderContainer from './OrderContainer'

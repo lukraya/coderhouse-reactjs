@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import {firestore} from '../firebase9';
+import {firestore} from '../../firebase9';
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import '../styles.css';
+/* import '../styles.css'; */
 import ItemList from '../views/ItemList';
 
 const ItemListContainer = () => {

@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
-import { contexto } from '../CartContext';
-import '../styles.css';
+import { contexto } from '../../CartContext';
+/* import '../styles.css'; */
 import ItemCount from '../views/ItemCount';
 import ItemDetailButtons from '../views/ItemDetailButtons';
 import ItemDetailInfo from '../views/ItemDetailInfo';
