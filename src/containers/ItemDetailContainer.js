@@ -13,7 +13,6 @@ const ItemDetailContainer = ()=> {
     useEffect(()=>{
         setItem()
 
-        //Firebase v9 modular
         //Obvie el if(id) que tenía antes envolviendo todo
         const itemRef = doc(firestore, "items", id)
         getDoc(itemRef)
@@ -33,24 +32,7 @@ const ItemDetailContainer = ()=> {
         .catch((err)=>{
             console.log(err)
         })
-
-        //Firebase 8 - OLD
-        /* const itemsCollection = firestore.collection("items")
-        //where: trabaja sobre un campo del documento, not for ID
-        if(id){            
-            const query = itemsCollection.get()
-            query
-            .then((resultados)=>{
-                const arrayDocs = resultados.docs                
-                const resultado = (arrayDocs.find(doc=>doc.id===id))
-                const res = {   id: id,                                
-                                ...resultado.data()    }
-                setItem(res)
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-        } */
+        
     }, [id])
     
     return (

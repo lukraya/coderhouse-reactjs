@@ -19,19 +19,7 @@ const OrderContainer = (orden) => {
                 console.log(err)
             })
         }
-
-        //Firebase 8 - OLD
-        /* const orders = firestore.collection("orders")
-        //Hace falta el if? - Sí, si no al cambiar ordenId volvería a correr el efecto. Tendría q tener todo en el IF
-        if (!ordenId) {
-            orders.add(orden)
-            .then(({id})=>{
-                setOrdenId(id)
-            })
-            .catch((err)=>{
-                console.log(err)
-            })
-        } */        
+              
     },[ordenId, orden])
 
 
