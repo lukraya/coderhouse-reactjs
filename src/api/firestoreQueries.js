@@ -1,6 +1,7 @@
 import { addDoc, collection, doc, getDoc, getDocs, query, where } from 'firebase/firestore'
 import {firestore} from './firebase9'
 
+//BACKUP JSON - FOREACH
 //Queries a ITEMS
 const itemsCollection = collection(firestore, "items")
 
@@ -16,6 +17,22 @@ export const getAllItems = async (callback)=>{
         })
     } catch (error) {
         console.log(error)
+
+        //Si falla Firestore, uso mi json de backup
+        /* let getProductos = fetch("../productos.json") //Esta ruta me lleva a public...
+
+        getProductos
+        .then((resultado)=>{
+            return resultado.json()
+        })
+        .then((res)=>{
+            setTimeout(()=>{
+                setItems(res)
+            }, 1000)
+        })
+        .catch((err)=>{
+            console.log(err)
+        }) */
     }
 }
 
@@ -32,6 +49,22 @@ export const getItemsByCategory = async (id, callback)=>{
         })
     } catch (error) {
         console.log(error)
+
+        //Si falla Firestore, uso mi json de backup
+        /* let getProductos = fetch("../productos.json") //Esta ruta me lleva a public...
+
+        getProductos
+        .then((resultado)=>{
+            return resultado.json()
+        })
+        .then((res)=>{
+            setTimeout(()=>{
+                setItems(res.filter(item=>item.categoria===id))
+            }, 1000)
+        })
+        .catch((err)=>{
+            console.log(err)
+        }) */
     }
 }
 
