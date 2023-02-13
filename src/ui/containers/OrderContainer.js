@@ -16,7 +16,12 @@ const OrderContainer = (orden) => {
 
 
     return (
-        <Order ordenId={ordenId}/>
+        <>
+        {ordenId ?
+            <Order ordenId={ordenId}/>
+        : <p>Generando su orden</p>
+        }
+        </>
     )
 }
 
