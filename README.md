@@ -1,12 +1,12 @@
 # Proyecto Final para la cursada de ReactJs en Coderhouse
 
-Este proyecto fue desarrollado como ejercitación de los conceptos vistos en clase durante la cursada online de ReactJs en Coderhouse.
+Este proyecto fue desarrollado como ejercitación de los conceptos vistos en clase durante la cursada online de ReactJs en Coderhouse (2020-2021). En el presente (2023) se encuentra en revisión.
 
 ## De qué se trata el proyecto
-Este proyecto es la simulación de un ecommerce, en este caso, de un kiosco virtual.
+Este proyecto es la simulación del frontend de un ecommerce, en este caso, de un kiosco virtual.
 
 ## Qué funcionalidades tiene el proyecto
-La aplicación se extiende sólo del lado del cliente, es decir, sólo cuenta con el Frontend del desarrollo.
+La aplicación permite navegar un catálogo de productos, filtrarlos y ver el detalle de cada uno. Además permite agregar y quitar productos al carrito y simular una compra.
 
 ### Integración con Firestore
 La aplicación está integrada a Cloud Firestore, un servicio de base de datos de Firebase (Google).
@@ -35,5 +35,5 @@ La consola se abrirá ya ubicada en el directorio correcto.
 Escribir en la consola "npm i" y dar Enter. Esto hará que npm lea el archivo "package.json" del directorio y descargue las dependencias utilizadas en el proyecto.
 
 ### 4) Correr el proyecto
-Ahora ya podés iniciar el entonrno de trabajo. En la consola, situado en el directorio del proyecto, ingresar "npm start", Enter, y esperar a que npm abra la aplicación en el navegador. 
+Ahora ya podés iniciar el entorno de trabajo. En la consola, situado en el directorio del proyecto, ingresar "npm start", Enter, y esperar a que npm abra la aplicación en el navegador. 
 Asegurate de tener un editor de código para trabajar sobre el proyecto (por ejemplo: Visual Studio Code).
