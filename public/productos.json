@@ -3,26 +3,26 @@
         "categoria": "Bebidas",
         "title": "Coca-Cola Sabor Original",
         "description":"Coca-Cola Sabor Original Menos Azúcares, botella 500ml", 
-        "price":70,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEtVCn8bjmfZLLw24ZX9MOfAIFvHeyM8XJmYX9DNT6rN6i7FPsmwu57nPeELE&usqp=CAc"
+        "price":170,
+        "pictureURL": "./media/cocacolaOriginal.jpg"
     },
 
     {
         "id": 2,
         "categoria": "Bebidas",
         "title": "Aquarius Pera",
-        "description":"Aquarius sabor pera, botella 600ml", 
-        "price":70,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRa1raCz7xomuCwA_CoqFTmMYEUlvjwwxEjxzT-LfkHOPwVaGctRGZ7C-fW7pL6kUXmuCWGg98&usqp=CAc"
+        "description":"Aquarius sabor pera, botella 500ml", 
+        "price":170,
+        "pictureURL": "./media/aquariusPera.jpg"
     },
 
     {
         "id": 3,
         "categoria": "Bebidas",
         "title": "Cepita Manzana",
-        "description":"Jugo Cepita sabor manzana, 1lt", 
-        "price":70,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKLW-owJ1es38rPKM3TE94CZyEHHpbNyhxWQ&usqp=CAU"
+        "description":"Jugo Cepita sabor manzana, 200ml", 
+        "price":150,
+        "pictureURL": "./media/cepitaManzana.jpg"
     },
 
     {
@@ -30,35 +30,35 @@
         "categoria": "Galletitas",
         "title": "Pepitos",
         "description":"Galletitas con chips de chocolate", 
-        "price":50,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWrnDCREcGronwiMXfjyq7juWVdcs9kyabeo-TCY-_LXwv_GmN0bv2RUMjnQ460gxjfAOP8VnL&usqp=CAc"
+        "price":150,
+        "pictureURL": "./media/pepitos.jpg"
     },
 
     {
         "id": 5,
         "categoria": "Galletitas",
-        "title": "Sonrisas",
-        "description":"Galletias de vainilla con relleno de frutilla", 
-        "price":50,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBy2b3iKJQEVgKVEA0V1_pvnyTJPmsTUTYQZxB_m338QpPkgbYb6a86ddOknM9SfntnqcOOevDcQ&usqp=CAc"
+        "title": "Melitas",
+        "description":"Galletias con sabor a miel", 
+        "price":150,
+        "pictureURL": "./media/melitas.jpg"
     },
 
     {
         "id": 6,
         "categoria": "Galletitas",
-        "title": "Oreo",
+        "title": "Tortitas Black",
         "description":"Galletitas de chocolate con relleno de vainilla", 
-        "price":50,
-        "pictureURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXqjEQkfm1L42h-NHngD_hmwImshH_-Kh2B0YCpZTkgP0E8m7TbOPVV9xwbU7-rlJvjLsCaOFK&usqp=CAc"
+        "price":150,
+        "pictureURL": "./media/tortitasBlack.jpg"
     },
 
     {
         "id": 7,
         "categoria": "Alfajores",
-        "title":"Jorgito",
+        "title":"Terrabusi",
         "description":"Alfajor relleno con dulce de leche, bañado en chocolate", 
-        "price":30,
-        "pictureURL": "https://www.distribuidorapop.com.ar/wp-content/uploads/2016/08/alfajor-jorgito-chocolate-venta.jpg" 
+        "price":130,
+        "pictureURL": "./media/terrabusi.jpg" 
     },
 
     {
@@ -66,8 +66,8 @@
         "categoria": "Alfajores",
         "title":"Milka Oreo", 
         "description":"Alfajor triple, sabor Oreo, bañado en chocolate", 
-        "price":40,
-        "pictureURL": "https://http2.mlstatic.com/alfajor-milka-torta-oreo-61g-x-12u-gomarket-mayorista-D_NQ_NP_811865-MLA32318711592_092019-Q.jpg" 
+        "price":140,
+        "pictureURL": "./media/milkaOreo.jpg" 
     },
 
     {
@@ -75,7 +75,7 @@
         "categoria": "Alfajores",
         "title":"Shot", 
         "description":"Alfajor triple con maní", 
-        "price":40,
-        "pictureURL": "https://carrefourar.vtexassets.com/arquivos/ids/194936/77956699_02.jpg?v=637516044090470000" 
+        "price":140,
+        "pictureURL": "./media/shot.jpg" 
     }
 ]
