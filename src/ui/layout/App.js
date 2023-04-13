@@ -1,7 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-/* import '../styles.css'; */
-//Ya me llegan los estilos???
 import NavBar from './NavBar';
 import ItemListContainer from '../containers/ItemListContainer';
 import ItemDetailContainer from '../containers/ItemDetailContainer';
